@@ -9,6 +9,7 @@ function addProduct() {
   // You will need to create a div using javascript,
   // Use this site to help you understand how: https://www.w3schools.com/jsref/met_document_createelement.asp
   const div = document.createElement("div");
+  document.getElementById("container2").appendChild(div);
   // Once you create create a div,
   // you will need to get the output using the same method you did for the input
   // Except you do not need to include the value at the end.
@@ -26,6 +27,9 @@ function addProduct() {
   // That means you will need to assign your input using brackets around it
   // to a newProduct variable, remember that assign can mean the equals sign(=).
   let newProduct = { input };
+  newProduct = prompt('invisible ink, phone, airpods, airports');
+  let array = newProduct.split(',');
+  console.log(array);
   // Hint: You could push your product to a new array once you create a new variable
   // that makes a single object {} with the product variable you made above.
   // Please look up how to use push on an array here: https://www.w3schools.com/jsref/jsref_push.asp
@@ -35,19 +39,22 @@ function addProduct() {
   // Assignment 3:
   // Hint: Use a loop(look up the javascript loop on w3schools.) on your product array and set the max length of the loop to the array using
   // dot notation (array.length) and then you do the following:
-  //
+  // 
+  for (let i = 0; i < array.length; i++) {
+    text += array[i] + "<br>";
+  }
   // set the input to empty, similar how you would check in the if statement previously,
   // just get document.getelementbyid then set the .value to an empty string.
-
+document.getElementById()
   // then set the output div to display block, its normally set to none, which means invisible
   // This means that you need to get your output variable use dot notation to set style.display = "block"
-
+  Style.display="block"
   // set the div.textContent equal to the the array index number [i] and dot notation of the product
   // `${productArray[i].your input}`
-
+div.textContent = '${array[i].input}'
   // finally use the appendChild method from the output variable you had from earlier.
   // output.appendChild(yourdivnamehere)
-
+  output.appendChild(output);
   // this line is to prevent the webpage from reloading. DO NOT MODIFY IT.
   return false;
 }
